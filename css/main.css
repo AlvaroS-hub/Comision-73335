@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body{
+    background-color: #0e0d0d;
+}
+
+/* Estilos mobile */
+
+header{
+    color: whitesmoke;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1rem;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+/* Estilos del main */
+
+/* En mobile oculto 2 imagenes */
+
+main .img-dos, main .img-cinco{
+    display: none;
+}
+
+main{
+    height: 80vh;
+    margin: 0 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 25%);
+    gap: 1.5rem;
+    align-content: center;
+}
+
+main div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo del Footer */
+
+footer{
+    color: whitesmoke;
+    text-align: center;
+}
+
+/* Estilos de Tablet (media queri) */
+
+@media screen and (min-width: 768px){
+    main{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 40%);
+    }
+
+    main .img-cuatro{
+        grid-column:  span 2;
+    }
+
+    
+    
+}
+
+/* Estilo descktop*/
+
+@media screen and (min-width: 1024px){
+    main{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 30%) 15%;
+    }
+    main .img-dos, main .img-cinco{
+        display: inline;
+    }
+    main .img-uno{
+        grid-row: span 2;
+    }
+    main .img-cuatro{
+        grid-column: span 1;
+    }
+    main .img-tres{
+        grid-row: span 2;
+    }
+    main .img-cinco{
+        grid-column: span 3;
+    }
+
+    /* Estilo del footer*/
+    footer{
+        font-size: 1.5rem;
+    }
+
+}
+    
+
+
